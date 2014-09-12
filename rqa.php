@@ -74,8 +74,7 @@ add_shortcode('rqa', function($atts) {
         wp_reset_postdata();
         
         return apply_filters('rqa', '<div class="rqa">
-            <span class="rqa-question">' . $qlabel . (trim($qlabel != '') ? ' ' : '') . $question . '</span>
-            <span class="rqa-answer">' . $alabel . (trim($alabel != '') ? ' ' : '') . $content . '</span>
+            <span class="rqa-question">' . $qlabel . (trim($qlabel != '') ? ' ' : '') . $question . '</span><span class="rqa-answer">' . $alabel . (trim($alabel != '') ? ' ' : '') . $content . '</span>
         </div>');
     } else {
         return $none;
